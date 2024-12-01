@@ -3,24 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Monitoramento Climático</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Weather App</h1>
-        <div class="search-box">
-            <input type="text" id="city" placeholder="Enter city name...">
-            <button id="search-btn">Search</button>
-        </div>
-        <div class="weather-info">
-            <h2 id="location">Localização</h2>
-            <img id="weather-icon" src="" alt="Weather Icon">
-            <p id="temperature">Temperatura: --°C</p>
-            <p id="humidity">Humidade do ar: --%</p>
-            <p id="description">Descrição: --</p>
-        </div>
-    </div>
+    <header>
+        <h1>Monitoramento Climático</h1>
+        <nav>
+            <a href="#pesquisa">Buscar Clima</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+        <button id="toggle-tema">Alternar Tema</button>
+    </header>
+
+    <main>
+        <!-- Seção de Pesquisa -->
+        <section id="pesquisa" class="container">
+            <h2>Consulte o Clima de Qualquer Cidade</h2>
+            <div class="caixa-pesquisa">
+                <input type="text" id="campo-cidade" placeholder="Digite o nome da Cidade...">
+                <button id="botao-buscar">Buscar</button>
+                <div id="sugestoes"></div>
+            </div>
+            <div class="informacoes-clima">
+                <h3 id="localizacao">Localização: --</h3>
+                <img id="icone-clima" src="" alt="Ícone do Clima">
+                <p id="temperatura">Temperatura: --°C</p>
+                <p id="umidade">Humidade do ar: --%</p>
+                <p id="descricao">Descrição: --</p>
+                <p id="vento">Velocidade do vento: -- km/h</p>
+                
+            </div>
+            <canvas id="grafico-temperatura" width="400" height="200"></canvas>
+        </section>
+
+    </main>
+
+    <footer>
+        <p id="sobre">Monitoramento Climático é um Projeto Educativo para Explorar Informações Meteorológicas.</p>
+        <p>Todos os Direitos Reservados - Programador: Jardel M.Rocha</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

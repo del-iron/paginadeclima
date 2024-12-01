@@ -1,55 +1,86 @@
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #4facfe, #00f2fe);
-    color: #fff;
-    text-align: center;
     margin: 0;
     padding: 0;
+    background-image: url("imagens/mapa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #006064;
 }
 
-.container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+/* Modo Escuro */
+body.dark-mode {
+    background-color: rgba(0, 96, 100, 0.9);
+    color: rgb(8, 5, 1);
 }
 
-h1 {
-    margin-bottom: 20px;
-}
-
-.search-box {
-    margin-bottom: 20px;
-}
-
-input {
-    padding: 10px;
-    width: 70%;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-}
-
-button {
-    padding: 10px 15px;
-    background: #4facfe;
-    border: none;
+/* Cabeçalho */
+header {
+    background-color: rgba(0, 96, 100, 0.9);
     color: white;
-    border-radius: 5px;
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+#toggle-tema {
+    margin-top: 10px;
+    background: #004d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-button:hover {
-    background: #00f2fe;
+#toggle-tema:hover {
+    background: rgba(3, 165, 170, 0.9);
 }
 
-.weather-info {
-    margin-top: 20px;
+/* Container */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
 }
 
-#weather-icon {
-    width: 100px;
-    height: 100px;
+
+footer {
+    text-align: center; /* Centraliza o texto */
+    background-color: rgba(0, 96, 100, 0.9); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    position: relative; /* Para fixar no layout sem sobrepor conteúdo */
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #004d4d; /* Opcional: linha superior */
+}
+
+
+/* Outros Estilos Responsivos */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
 }
